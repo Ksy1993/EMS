@@ -1,0 +1,5 @@
+Id: <%= @event.id %><br>
+Event Name: <%= @event.title %><br>
+Event Start At: <%= @event.start %><br>
+Event End : <%= @event.end %><br>
+User created by : <%= User.where(id: '#{@event.user_id}').pluck(:name) %><br>

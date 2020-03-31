@@ -1,0 +1,8 @@
+Add new Event 
+<br><br/>
+<%= form_for @event do |event| %>
+Event Name: <%= event.text_field :title %><br>
+Start Date: <%= event.text_field :start %><br>
+End Date: <%= event.text_field :end %><br>
+<br><%= event.submit%>
+<% end %>

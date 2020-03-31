@@ -1,0 +1,32 @@
+
+<table width="50%" cellpadding="3" cellspacing="3" border="3" bordercolor="black">
+	<caption><b>Events<br></caption>
+   <tr>
+   	  <th>ID</th>
+   	  <th>Name</th>
+   	   <th>Start Date</th>
+   	    <th>End Date</th>
+      <th>Event Detail</th>
+   	  
+    	</tr>
+  <% @events.each do |events| %>
+  	<tr>
+      <td><%= events.id %></td>
+       <td><%= events.title %></td>
+       <td><%= events.start %></td>
+       <td><%= events.end %></td>
+         <td>
+            <%= link_to "Edit","/events/edit/#{events.id}" %>
+            <%= link_to "Delete","/events/destroy/#{events.id}" %>
+          </td>
+    </tr>
+  <% end %>
+
+</table>
+  <%= link_to "Create new event", new_event_path %>
+<div id="calendar"></div>
+<script type="text/javascript">
+$('#calendar').fullCalendar({
+	events: '/events.json'
+});
+</script>
