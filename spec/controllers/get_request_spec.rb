@@ -18,3 +18,23 @@ describe "GET events#show" do
     it "should render events#new template" do
     end
   end
+
+
+  RSpec.describe EventsController, type: :controller do
+  describe "#index" do
+    context "as an authenticated user" do
+      before do
+        @user = FactoryBot.create(:user)
+      end
+
+      it "responds successfully" do
+        sign_in @user
+        get :index
+        aggregate_failures do
+          expect(response).to be_success
+          expect(response).to have_http_status "200"
+        end
+      end
+    end
+  end
+end
