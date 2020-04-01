@@ -9,3 +9,12 @@ RSpec.describe EventsController, type: :controller do
     end
   end
 end
+
+describe "GET events#show" do
+    it "should render events#show template" do
+    end
+  end
+  describe "GET events#new" do
+    it "should render events#new template" do
+    end
+  end
