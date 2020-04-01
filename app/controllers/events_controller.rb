@@ -17,8 +17,11 @@ class EventsController < ApplicationController
     event.start = params[:event][:start]
     event.end = params[:event][:end]
     event.user_id = current_user.id
-    event.save
+    if event.save
     redirect_to events_index_path
+  else
+    redirect_to events_new_path
+  end
   end
   def edit
     @event = Event.find(params[:id])
