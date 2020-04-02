@@ -60,6 +60,7 @@ end
 group :development, :test do
   gem 'rspec-rails', '~> 3.4', '>= 3.4.2'
   gem 'shoulda-matchers', '~> 3.1', '>= 3.1.1'
+  gem 'factory_bot', '~> 4.8', '>= 4.8.2'
 end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

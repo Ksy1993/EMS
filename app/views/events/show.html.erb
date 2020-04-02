@@ -3,3 +3,6 @@ Event Name: <%= @event.title %><br>
 Event Start At: <%= @event.start %><br>
 Event End : <%= @event.end %><br>
 Event created by : <%= User.where(id: @event.user_id).pluck(:email) %><br>
+
+ <%= link_to "Edit","/events/edit/#{@event.id}" %>
+ <%= link_to "comment", new_comment_path %>

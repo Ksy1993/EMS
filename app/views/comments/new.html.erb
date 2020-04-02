@@ -1,0 +1,7 @@
+Add new Comment
+<br><br/>
+<%= form_for @comment do |comment| %>
+description: <%= comment.text_field :description %><br>
+<%= comment.collection_select(:event_id, Event.all, :id, :title, prompt: "please select event") %><br>
+<br><%= comment.submit%>
+<% end %>
