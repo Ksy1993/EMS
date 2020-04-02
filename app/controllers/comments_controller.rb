@@ -18,7 +18,7 @@ class CommentsController < ApplicationController
   def edit
   end
 
-  def show
-  	@comment = Comment.find(params[:id])
-  end
+  # def show
+  # 	@comment = Comment.find(params[:id])
+  # end
 end
