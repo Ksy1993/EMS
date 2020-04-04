@@ -23,7 +23,9 @@
   <% end %>
 
 </table>
+<% if current_user.present? %>
   <%= link_to "Create new event", new_event_path %>
+  <% end %>
 <div id="calendar"></div>
 <script type="text/javascript">
 $('#calendar').fullCalendar({

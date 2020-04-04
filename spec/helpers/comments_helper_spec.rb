@@ -11,5 +11,11 @@ require 'rails_helper'
 #   end
 # end
 RSpec.describe CommentsHelper, type: :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe "#link_to_comment" do
+    it "links to a comment using its name" do
+      comment = Comment.create!(:description => "good one", :event_id => "4")
+      expect(helper.link_to_comment(comment)).to include("good one")
+      expect(helper.link_to_comment(comment)).to include(comment_path(comment))
+    end
+  end
 end

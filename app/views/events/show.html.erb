@@ -6,3 +6,4 @@ Event created by : <%= User.where(id: @event.user_id).pluck(:email) %><br>
 
  <%= link_to "Edit","/events/edit/#{@event.id}" %>
  <%= link_to "comment", new_comment_path %>
+ <%= link_to "All comments", comments_path %>
