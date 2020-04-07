@@ -58,7 +58,6 @@ group :test do
   gem 'chromedriver-helper'
    gem 'database_cleaner'
   gem 'factory_girl_rails'
-  gem 'faker'
 end
 group :development, :test do
   gem 'rspec-rails', '~> 3.4', '>= 3.4.2'
@@ -66,6 +65,7 @@ group :development, :test do
   gem 'factory_bot', '~> 4.8', '>= 4.8.2'
   gem 'capybara', '~> 2.7', '>= 2.7.1'
   gem 'rails-controller-testing'
+  gem 'faker', :require => false
 end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

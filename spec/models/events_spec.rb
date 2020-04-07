@@ -40,5 +40,14 @@ it "title should not be too short" do
 subject.title = "a"
 expect(subject).to_not be_valid
 end
+end
 
+RSpec.describe Event, type: :model do
+	context 'validations tests' do
+		let(:event) { build(:event)}
+		it " ensures title is present" do
+			event.title = nil
+			except(event.save).to eq(false)
+		end
+	end
 end

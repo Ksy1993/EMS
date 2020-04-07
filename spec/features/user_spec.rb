@@ -7,11 +7,3 @@
 # 		expect(page).to have _content("rahul123")
 # 	end
 # end
-require "rails_helper"
-RSpec.feature "adding event" do
-	scenario "allow user to create event" do
-		event = create(:event)
-		visit event_path
-		expect(page).to have_content("good")
-	end
-end
