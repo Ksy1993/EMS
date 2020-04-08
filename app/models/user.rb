@@ -4,4 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
          has_many :events
+
+   after_create :signup_confirmation
+   def signup_confirmation
+   	  UserMailer.signup_confirmation(self).deliver
+   end
+ 
 end
